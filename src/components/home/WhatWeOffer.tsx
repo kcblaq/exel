@@ -1,43 +1,40 @@
 
 import React from 'react'
-import ServicePlaceholder from './ServicePlaceholder'
-import PayrollSoftware from './PayrollSoftware';
+import { ServiceDetails } from '@/util/ServiceDetails';
+import SectionTitle from '@/util/SectionTitle';
+import ServicePlaceholder from '../placeholders/ServicePlaceholder';
 
 
-
-const serviceData = [
-    {
-        title: "Payroll Software (Licensed & Sold by Exel Consultancy)",
-        description: "Our proprietary payroll software provides seamless automation, compliance, and efficiency for businesses.",
-        ctaText: "Learn More",
-        items: ["Fully Licensed & HMRC-Approved", "Seamless Payroll Processing & Tax Calculations", "Integrates with HR & Accounting Software", "Dedicated Customer Support & Training"],
-        ctaLink: "/services/consulting",
-        icon: <PayrollSoftware  />
-    },
-];
-  
 
 export default function WhatWeOffer() {
     return (
-        <section className="grid grid-cols-1">
-            <div className="flex flex-col gap-2 2xl:gap-4 my-6 md:my-12">
-                <h1 className="text-2xl md:text-4xl font-bold text-left ">
-                What We Offer
-            </h1>
-            <p>
-                Our services cover the right solutions to streamline your financial operations.
-            </p>
+        <section className="grid grid-cols-1 px-4 md:px-8 xl:px-14 2xl:px-20">
+            <div className="flex flex-col gap-2 2xl:gap-4">
+                <SectionTitle title="What We Offer" />
+                <p>
+                    Our services cover the right solutions to streamline your financial operations.
+                </p>
             </div>
-        <ServicePlaceholder
-            title={serviceData[0].title}
-            description={serviceData[0].description}
-            listItems={serviceData[0].items}
-            ctaText="Learn More"
-            ctaLink="/services/consulting"
-            icon={serviceData[0].icon}
-        />
 
-    
+            {
+                ServiceDetails.map((service, index) => (
+                    <li className=" flex flex-col list-none" key={index}>
+
+                        <ServicePlaceholder
+                            key={index}
+                            title={service.title}
+                            description={service.description}
+                            listItems={service.items}
+                            ctaText={service.ctaText}
+                            ctaLink={service.ctaLink}
+                            icon={<service.icon />}
+                        />
+                    </li>
+                ))
+            }
+
+
+
 
         </section>
     )

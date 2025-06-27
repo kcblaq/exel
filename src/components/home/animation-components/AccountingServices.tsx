@@ -1,12 +1,9 @@
-// components/JitterAnimation.jsx
-// import dynamic from 'next/dynamic';
-
 "use client";
 import React from 'react';
-import animationData from '../../../public/animations/payroll-software.json';
+import animationData from '../../../../public/animations/accounting-services.json';
 import Lottie from 'lottie-react';
 
-const PayrollSoftware = () => {
+const AccountingServices = () => {
   return (
     <div className="jitter-container">
       <Lottie
@@ -19,11 +16,11 @@ const PayrollSoftware = () => {
             y: '-50%',
           }
         }}
-        className="w-full h-auto"
+        className="w-full h-[50vh]"
       />
     </div>
   );
 };
 
 
-export default PayrollSoftware;
+export default AccountingServices;

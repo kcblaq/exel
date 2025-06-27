@@ -4,7 +4,7 @@ import { ButtonExel } from '../ButtonExel'
 
 export default function Hero() {
     return (
-        <section className="grid grid-cols-1 md:grid-cols-2 h-screen gap-4">
+        <section className=" px-4 md:px-8 xl:px-14 2xl:px-20 grid grid-cols-1 md:grid-cols-2 h-screen gap-4">
             <div className="flex flex-col justify-center items-start gap-4 md:gap-8">
                 <h1 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold">
                     Your One-Stop Solution for Seamless Financial Management
