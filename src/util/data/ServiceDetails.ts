@@ -12,7 +12,7 @@ export const ServiceDetails = [
         description: PayrollSoftwareDescription,
         ctaText: "Book a Free Demo",
         items: ["Fully Licensed & HMRC-Approved", "Seamless Payroll Processing & Tax Calculations", "Integrates with HR & Accounting Software", "Dedicated Customer Support & Training"],
-        ctaLink: "/services/consulting",
+        ctaLink: "https://booking-link.zohobookings.eu/#/exelconsultancy",
         icon: PayrollSoftware
     },
     {
@@ -20,7 +20,7 @@ export const ServiceDetails = [
         description: PayrollSolutionsDescription,
         ctaText: "Request a Free Consultation",
         items: ["PAYE Payroll for Businesses & Recruitment Agencies", "Automated Payroll Processing", "RTI & HMRC Reporting"],
-        ctaLink: "/services/consulting",
+        ctaLink: "https://booking-link.zohobookings.eu/#/exelconsultancy",
         icon: PayrollSolutions
     },
     {
@@ -28,7 +28,7 @@ export const ServiceDetails = [
         description: UmbrellaServicesDescription,
         ctaText: "Request a Free Consultation",
         items: ["IR35-Compliant Payroll Solutions", "Faster Payments & Secure Processing", "Tax Efficiency for Contractors"],
-        ctaLink: "/services/consulting",
+        ctaLink: "https://booking-link.zohobookings.eu/#/exelconsultancy",
         icon: UmbrellaServices
     },
     {
@@ -36,7 +36,7 @@ export const ServiceDetails = [
         description: AccountingServicesDescription,
         ctaText: "Request a Free Consultation",
         items: ["Self-Employed & Contractor Accounting", "Tax Planning & VAT Returns", "Bookkeeping & Financial Advisory"],
-        ctaLink: "/services/consulting",
+        ctaLink: "https://booking-link.zohobookings.eu/#/exelconsultancy",
         icon: AccountingServices
     },
 

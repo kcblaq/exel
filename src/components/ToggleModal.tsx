@@ -53,47 +53,66 @@ export default function ToggleModal() {
                         <ul className="flex flex-col gap-4">
                             {MenuItems.map((item) => (
                                 <li key={item.name} className="list-none border-b border-gray-200">
-                                    <Link
-                                        href={item.href}
-                                        className=" text-sm font-medium hover:text-primary"
-                                    >
-                                        {item.name}
-                                    </Link>
+                                    <SheetClose asChild>
+                                        <Link
+                                            href={item.href}
+                                            className="text-sm font-medium hover:text-primary"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </SheetClose>
 
                                 </li>
                             ))}
                         </ul>
 
-                        <ul className="flex flex-col-reverse md:flex-row items-center justify-center gap-2 w-full">
+                        <ul className="flex flex-col-reverse md:flex-row items-center justify-center gap-4 w-full">
                             <li className="flex justify-center whitespace-nowrap">
-                                <Link
-                                    href="/about"
-                                    className="transition-transform duration-100 hover:text-primary text-center"
-                                >
-                                    Contact Us
-                                </Link>
+                                <SheetClose asChild>
+
+                                    <Link
+                                        href="/contact"
+                                        className="transition-transform duration-100 hover:text-primary text-center"
+                                    >
+                                        Contact Us
+                                    </Link>
+                                </SheetClose>
+
                             </li>
 
                             <li className="w-full">
-                                <Link href="/" className="block w-full hover:text-gray-400">
-                                    <ButtonExel
-                                        text="Log in"
-                                        variant="outline"
-                                        aria-label="Log in to your account"
-                                        className="w-full"
-                                    />
-                                </Link>
+                                <SheetClose asChild>
+
+                                    <Link href="https://candidateportal.zcrmportals.eu/portal/CandidatePortal/crm/login.sas" 
+                                    className="block w-full hover:text-gray-400"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >
+                                        <ButtonExel
+                                            text="Log in"
+                                            variant="outline"
+                                            aria-label="Log in to your account"
+                                            className="w-full"
+                                        />
+                                    </Link>
+                                </SheetClose>
                             </li>
 
                             <li className="w-full">
-                                <Link href="/" className="block w-full hover:text-gray-400">
-                                    <ButtonExel
-                                        text="Get a Free Consultation"
-                                        variant="default"
-                                        aria-label="Get a Free Consultation"
-                                        className="w-full"
-                                    />
-                                </Link>
+                                <SheetClose asChild>
+                                    <Link href="https://booking-link.zohobookings.eu/#/exelconsultancy"
+                                        className="block w-full hover:text-gray-400"
+                                        target="_blank"
+                                        rel="noopener"
+                                    >
+                                        <ButtonExel
+                                            text="Get a Free Consultation"
+                                            variant="default"
+                                            aria-label="Get a Free Consultation"
+                                            className="w-full"
+                                        />
+                                    </Link>
+                                </SheetClose>
                             </li>
                         </ul>
 

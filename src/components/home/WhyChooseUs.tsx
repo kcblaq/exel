@@ -11,12 +11,12 @@ export default function WhyChooseUs() {
         <section className={`${PageLayout} grid grid-cols-1 gap-4`}>
             <div className=" mx-auto flex flex-col items-center justify-center">
                 <SectionTitle title="Why Choose Us" />
-                <SubTitle>
+                <SubTitle className='text-center'>
                     A smarter way to manage your payroll and financial operations.
                 </SubTitle>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14">
                 {WhyChooseusDetail.map((item, index) => (
                     <WhyChooseUsPlaceholder
                         key={index}

@@ -36,7 +36,7 @@ const MobileNav = () => {
             </Link>
           </li>
           <li className="list-none transform transition-transform duration-100 hover:scale-115">
-            <Link href="/" className=" hover:text-primary">
+            <Link href="/blog" className=" hover:text-primary">
               Blog
             </Link>
           </li>
@@ -70,7 +70,7 @@ const MobileNav = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className=" hover:text-gray-400">
+            <Link href="/quote" className=" hover:text-gray-400">
               <ButtonExel
                 text="Get a Free Consultation "
                 variant={"default"}

@@ -13,10 +13,10 @@ export default function IndustryWeSupportPlaceholder(props: IndustryWeSupportPla
             {React.cloneElement(props.icon)}
         </span>
 
-        <h5 className=" font-semibold text-primary">
+        <h5 className=" font-semibold text-[#21272A]">
             {props.industry}
         </h5>
-        <p className="text-[#21272A]"> 
+        <p className="text-[#21272A] font-display"> 
             {props.description}
         </p>
 

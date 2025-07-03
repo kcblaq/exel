@@ -88,7 +88,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Excel Consultancy. All rights reserved.</p>
 
 
-          <div className="flex flex-col md:flex-row md:items-center gap-2 justify-normal md:justify-end md:gap-4">
+          <div className="flex font-display flex-col md:flex-row md:items-center gap-2 justify-normal md:justify-end md:gap-4">
 
             <a href="https://twitter.com" className=" hover:underline">
               Modern Slavery Statement

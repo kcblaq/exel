@@ -12,12 +12,13 @@ export default function WhatWeOffer() {
         <section className="grid grid-cols-1 px-4 md:px-8 xl:px-14 2xl:px-20">
             <div className="flex flex-col gap-2 2xl:gap-4">
                 <SectionTitle title="What We Offer" />
-                <SubTitle>
+                <SubTitle className='font-semibold'>
                     Our services cover the right solutions to streamline your financial operations.
                 </SubTitle>
             </div>
 
-            {
+            <div className="grid gap-4 md:gap-0">
+                {
                 ServiceDetails.map((service, index) => (
                     <li className=" flex flex-col list-none" key={index}>
 
@@ -33,6 +34,7 @@ export default function WhatWeOffer() {
                     </li>
                 ))
             }
+            </div>
 
 
 

@@ -30,7 +30,7 @@ export default function TestimonialCarousel() {
 
     return (
         // <div className="h-full w-full p-2 mx-auto">
-           <section className="grid gap-10 w-full md:px-20 overflow-hidden mx-a">
+           <section className="flex flex-col gap-10 w-full overflow-hidden mx-auto">
 
        <div className="h-full w-full max-w-full overflow-hidden p-2 md:p-8 mx-auto">
         

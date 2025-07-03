@@ -34,16 +34,7 @@ const NewsletterForm = () => {
     setIsSubmitting(true);
 
     try {
-      // This would call your API route
-      // const response = await fetch('/api/subscribe', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email }),
-      // });
-
-      // if (!response.ok) {
-      //   throw new Error('Subscription failed');
-      // }
+     
      alert('Subscription successful!'); // Simulating success for demo purposes
       setIsSuccess(true);
       setEmail('');
@@ -64,10 +55,10 @@ const NewsletterForm = () => {
         <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
 
 
-         <div className="w-full">
+         <div className="w-full md:min-w-sm">
            <div className="relative ">
             {/* Icon */}
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-white">
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-black">
               <CiMail size={20} />
             </div>
 
@@ -78,7 +69,7 @@ const NewsletterForm = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email to get the latest news..."
               aria-label="Email address"
-              className={`w-full pl-10 pr-4 py-3 h-10 rounded-lg border focus:outline-none ${error ? 'border-red-500' : 'border-gray-300 focus:shadow-outline focus:shadow-2xl focus:border-white'
+              className={`w-full font-display pl-10 bg-white text-[#697077] pr-4 py-3 h-10 rounded-lg border focus:outline-none ${error ? 'border-red-500' : 'border-gray-300 focus:shadow-outline focus:shadow-2xl focus:border-white'
                 }`}
               disabled={isSubmitting}
             />
@@ -98,7 +89,7 @@ const NewsletterForm = () => {
           </ButtonExel>
         </form>
       )}
-      <p className="mt-1 text-xs text-gray-200">
+      <p className="mt-1 text-xs text-white font-display">
         We respect your privacy. Unsubscribe at any time.
       </p>
     </div>

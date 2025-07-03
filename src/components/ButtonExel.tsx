@@ -4,13 +4,13 @@ import { clsx } from "clsx";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer transform origin-center hover:scale-102",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer transform origin-center hover:scale-102",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-[#2E5C7A] hover:text-white",
         destructive: "bg-destructive text-white hover:bg-destructive/90",
-        outline: "border border-primary hover:bg-accent hover:text-accent-foreground text-primary",
+        outline: "border border-primary hover:bg-[#D0E1F2] hover:text-primary text-primary",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         form: "bg-white text-primary hover:bg-primary/40 "

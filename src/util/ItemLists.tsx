@@ -1,5 +1,5 @@
 import React from 'react'
-import { TiTick } from 'react-icons/ti';
+import { FaCircleCheck } from "react-icons/fa6";
 
 interface ItemListsProps {
     items: string[];
@@ -20,6 +20,7 @@ export default function ItemLists({ items }: ItemListsProps) {
 
 export const Ticks = () => {
 
-    return <span className="bg-primary rounded-full p-2"> <TiTick className='text-white' />
+    return <span className=""> 
+    <FaCircleCheck  className='text-primary'/>
     </span>
 }

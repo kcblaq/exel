@@ -150,18 +150,14 @@ const ComingSoon = () => {
             <p className="text-gray-600 mb-4">
               In the meantime, explore our other features
             </p>
-            <Link href="/">
+            <Link href="/services">
               <Button className="bg-[#4682B4] hover:bg-[#36648B] text-white px-8">
                 Explore Our Services
               </Button>
             </Link>
           </div>
 
-          {/* Footer */}
-          <div className="mt-16 text-center text-gray-500">
-            <p>© 2024 Form Craft Pathway. All rights reserved.</p>
-            <p className="mt-2">Working hard to serve you better.</p>
-          </div>
+      
         </div>
       </div>
     </div>
