@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from 'react';
 import Script from 'next/script';
-import Image from "next/image";
 
 const ZohoForm = () => {
   const formId = "sf3z768b29807a31ad9bfa27f7d693c9733672b31acb09529a5ebc763089e8ce6b37";
