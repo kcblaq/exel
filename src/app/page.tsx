@@ -5,7 +5,7 @@ import IndusctryWeSupport from "@/components/home/IndusctryWeSupport";
 import Testimonials from "@/components/home/Testimonials";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import NewsletterRender from "@/components/NewsletterRender";
+// import NewsletterRender from "@/components/NewsletterRender";
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <Testimonials />
         <IndusctryWeSupport />
         <FAQ />
-        <NewsletterRender />
+        {/* <NewsletterRender /> */}
 
     </main>
   );
