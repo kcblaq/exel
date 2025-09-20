@@ -14,7 +14,7 @@ interface TakeActionCardProps {
 
 export default function TakeActionCard({ title, description, cta }: TakeActionCardProps) {
   return (
-    <div className={`px-4 md:px-8 xl:px-14 2xl:px-20 py-4 bg-primary text-white text-center grid gap-3 md:gap-6`}>
+    <div className={`px-4 md:px-8 xl:px-14 2xl:px-20 py-4 md:py-10 bg-primary text-white text-center grid gap-3 md:gap-6`}>
       <h3 className='font-bold text-2xl'>{title}</h3>
       <p>{description}</p>
       <span className="max-w-md mx-auto">

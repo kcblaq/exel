@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 export function SubTitle({title}: {title: string}) {
@@ -7,13 +8,21 @@ export function SubTitle({title}: {title: string}) {
         </h3>
     )
 }
-export function Title({title}: {title: string}) {
-    return (
-        <h3 className='text-lg lg:text-4xl font-bold text-center'>
-            {title}
-        </h3>
-    )
+
+
+interface TitleProps {
+  title: string;
+  className?: string;
 }
+
+export function Title({ title, className }: TitleProps) {
+  return (
+    <h3 className={cn("text-lg lg:text-4xl font-bold text-center", className)}>
+      {title}
+    </h3>
+  );
+}
+
 
 export function ExpertiseCard({score, description, src}: {score: number, description: string, src: string}) {
     return (
