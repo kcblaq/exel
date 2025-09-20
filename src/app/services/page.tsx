@@ -2,8 +2,13 @@
 import React from 'react'
 import Hero from './components/Hero'
 import ServicesYouCanGet from './components/ServicesYouCanGet'
-import { items } from './components/data'
+import { exploreMoreWaysItems, faqItems, howItWorksItems, items } from './components/data'
 import GetValue from './components/GetValue'
+import HowItWorks from './components/HowItWorks'
+import ServicesFaq from './components/ServicesFaq'
+import ExploreMoreWays from './components/ExploreMoreWays'
+import { FromBlogSection } from './components/FromOurBlog'
+import TakeActionCard from './components/TakeAction'
 
 export default function page() {
   return (
@@ -16,6 +21,20 @@ export default function page() {
         link: '/',
         isPrimary: true
       }} items={["100% HMRC compliant", "Automated calculations", "Real-time reporting"]} />
+      <HowItWorks title='How Exel’s Payroll Software Works' subtitle='Get Set Up in Under 48 Hours. No Tech Expertise Needed.' items={howItWorksItems} />
+      <ServicesFaq title='Frequently Asked Questions' items={faqItems} subtitle='Everything you need to know about our payroll software' />
+      <ExploreMoreWays title='Explore More Ways Exel Can Help Your Business' items={exploreMoreWaysItems} />
+      <FromBlogSection />
+      <TakeActionCard
+        title="Ready to Automate Payroll for Your business?"
+        description='Join hundreds of UK businesses who trust Exel Consultancy for their payroll and finance needs. Speak with an expert today!'
+        cta={{
+          text: 'Contact Support',
+          link: '/support',
+          isPrimary: true
+        }}
+      />
+
     </main>
   )
 }
