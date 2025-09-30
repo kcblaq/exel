@@ -38,34 +38,98 @@ export default async function page({params}: ServicePageProps) {
   // const data = await getServices(params.slug);
   const service = await getServiceBySlug(params.slug)
   if (!service) return notFound();
-  console.log("Service data..." , params.slug,  service)
-  return (
-    <main className='mx-auto '>
-      <Hero title={'Smart Payroll Software for Modern Businesses'} description={'Automate your entire payroll process in minutes, not hours. From PAYE calculations to RTI submissions - we handle the complexity so you can focus on growing your business.'} 
-      image={'/payroll-hero.png'} isPrimary />
-      
-      <ServicesYouCanGet items={items} />
-      <GetValue title={'Payroll Software That Gives You Peace of Mind'} subtitle={'Get value for your time and money'} cta={{
-        text: 'Start Your Free Trial Today',
-        link: '/',
-        isPrimary: true
-      }} items={["100% HMRC compliant", "Automated calculations", "Real-time reporting"]} />
-      <HowItWorks title='How Exel’s Payroll Software Works' subtitle='Get Set Up in Under 48 Hours. No Tech Expertise Needed.' items={howItWorksItems} />
-      <ServicesFaq title='Frequently Asked Questions' items={faqItems} subtitle='Everything you need to know about our payroll software' />
-      <ExploreMoreWays title='Explore More Ways Exel Can Help Your Business' items={exploreMoreWaysItems} />
-      <FromBlogSection />
-      <TakeActionCard
-        title="Ready to Automate Payroll for Your business?"
-        description='Join hundreds of UK businesses who trust Exel Consultancy for their payroll and finance needs. Speak with an expert today!'
-        cta={{
-          text: 'Contact Support',
-          link: '/support',
-          isPrimary: true
-        }}
-      />
+  console.log("Service data..." , params.slug,  service);
+  // const baseUrl = process.env.NEXT_STRAPI_API_URL
+ return (
+    <main className="mx-auto">
+      {service.Blocks?.map((block) => {
+        switch (block.__component) {
+          case "hero.hero":
+            return (
+              <Hero
+                key={block.id}
+                title={block.title}
+                description={block.description}
+                image={`/step2.png`}
+                isPrimary={block.isPrimary}
+                cta={block.cta}
+                
+              />
+            );
 
+          // case "global.services-second-section":
+          //   return (
+          //     <ServicesYouCanGet
+          //       key={block.id}
+          //       title={block.title}
+          //       items={block.serviceCards?.map((c: any) => ({
+          //         title: c.title,
+          //         description: c.description,
+          //         icon: c.icon?.url,
+          //       }))}
+          //     />
+          //   );
+
+          // case "global.value-card":
+          //   return (
+          //     <GetValue
+          //       key={block.id}
+          //       title={block.title}
+          //       subtitle={block.subTitle}
+          //       cta={block.cta}
+          //       items={[]} // adapt if needed
+          //     />
+          //   );
+
+          // case "global.testimonial-section":
+          //   return (
+          //     <section key={block.id}>
+          //       {block.testimonialCards?.map((t: any) => (
+          //         <div key={t.id}>
+          //           <p>{t.message}</p>
+          //           <p>{t.name}</p>
+          //           <img src={t.profileImage?.url} alt={t.name} />
+          //         </div>
+          //       ))}
+          //     </section>
+          //   );
+
+          // case "global.faq-section":
+          //   return (
+          //     <ServicesFaq
+          //       key={block.id}
+          //       title={block.faqOnService}
+          //       subtitle={block.subTitle}
+          //       items={block.faqs}
+          //     />
+          //   );
+
+          // case "global.explore-more-services-section":
+          //   return (
+          //     <ExploreMoreWays
+          //       key={block.id}
+          //       title={block.title}
+          //       items={block.exploreMoreServiceCards}
+          //     />
+          //   );
+
+          // case "global.need-to-take-action-section":
+          //   return (
+          //     <TakeActionCard
+          //       key={block.id}
+          //       title={block.title}
+          //       description={block.description}
+          //       cta={block.cta}
+          //     />
+          //   );
+
+          default:
+            return null; // unknown block, skip
+        }
+      })}
     </main>
-  )
+  );
+
 }
 
 
