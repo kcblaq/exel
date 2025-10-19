@@ -3,23 +3,29 @@
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { Plus, Minus } from "lucide-react"
 
+interface FAQItem {
+  id: number;
+  documentId: string;
+  question: string;
+  answer: string;
+  category: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}
 
 interface CustomAccordionProps {
-title: string;
-content: string;
+  data: FAQItem[];
 }
 
-interface data {
-  data: CustomAccordionProps[];
-}
-export default function CustomAccordion({ data }: data) {
+export default function CustomAccordion({ data }: CustomAccordionProps) {
   return (
     <Accordion type="single" collapsible className="w-full pb-2 grid gap-4 my-8 lg:my-16">
      {
        data.map((item, index) => (
-         <AccordionItem key={index} value={`item-${index}`} className="w-full border rounded-md px-4 bg-white max-w-2xl mx-auto ">
+         <AccordionItem key={item.id} value={`item-${item.id}`} className="w-full border rounded-md px-4 bg-white max-w-2xl mx-auto ">
            <AccordionTrigger className="w-full group flex items-center justify-between [&>svg]:hidden cursor-pointer">
-             <span>{item.title}</span>
+             <span>{item.question}</span> {/* Use question instead of title */}
 
              {/* Transition wrapper */}
              <span className="ml-2 inline-flex items-center transition-all duration-300 ease-in-out">
@@ -37,7 +43,7 @@ export default function CustomAccordion({ data }: data) {
            </AccordionTrigger>
 
            <AccordionContent className="transition-all duration-300 ease-in-out w-full">
-             {item.content}
+             {item.answer} {/* Use answer instead of content */}
            </AccordionContent>
          </AccordionItem>
        ))
