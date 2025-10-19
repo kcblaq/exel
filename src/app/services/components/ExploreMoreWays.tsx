@@ -1,6 +1,7 @@
 
 import { PageLayout } from '@/util/PageLayout'
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react'
 
 interface ExploreMoreWaysProps {
@@ -20,9 +21,9 @@ export default function ExploreMoreWays({ title, items }: ExploreMoreWaysProps) 
             <div key={index} className="border p-4 rounded-md gap-3 grid">
               <h2 className="font-bold">{item.title}</h2>
               <p>{item.description}</p>
-              <span className={`flex items-center gap-2 text-blue-400 font-semibold mt-2 cursor-pointer`}>Learn More <i className="fas fa-chevron-right">
-                <ArrowUpRight />
-                </i></span>
+              <Link href={"/contact"} className={`flex items-center gap-1 text-blue-400 font-semibold mt-2 cursor-pointer`}>Learn More <i className="fas fa-chevron-right">
+                <ArrowUpRight className=' text-sm' />
+                </i></Link>
             </div>
           ))}
         </div>

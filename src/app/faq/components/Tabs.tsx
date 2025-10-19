@@ -79,7 +79,6 @@ export default async function TabsComponent() {
 
   const availableCategories = getAvailableCategories();
   const allTabs = [{ value: "all", label: "All" }, ...availableCategories];
-  console.log("AVA CAT", availableCategories[0])
 
   return (
     <section className={`${PageLayout} w-full`}>

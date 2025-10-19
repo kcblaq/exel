@@ -101,7 +101,6 @@ const MultiStepForm = () => {
 
     const handleSubmit = () => {
         if (validateStep(currentStep)) {
-            console.log('Form submitted:', formData);
             triggerToast({
                 title: "Quote Request Submitted!",
                 description: "We'll get back to you with a personalized quote soon.",
