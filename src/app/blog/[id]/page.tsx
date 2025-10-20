@@ -3,6 +3,7 @@ import { BlogBreadCrumb } from '../components/BlogBreadCrumb'
 import { Title } from '@/app/about/components/Utils.about'
 import { blogSections } from '../data'
 import Image from 'next/image'
+import { getPosts } from '@/services/getPost'
 
 // interface Props {
 //     section: string;
@@ -13,7 +14,9 @@ import Image from 'next/image'
 //     sections: Props[]
 // }
 
-export default function BlogPostPage() {
+export default async function BlogPostPage() {
+
+  
     return (
         <div className={`px-4 md:px-8 xl:px-14 2xl:px-20 my-4 md:my-20 py-4 grid gap-4 lg:gap-6 `}>
             <BlogBreadCrumb service="Umbrella Services" postTitle="2025 IR35 Changes: What Contractors Must Know" />
