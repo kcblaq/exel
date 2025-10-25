@@ -6,6 +6,13 @@ import type { Components } from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 
+// Function to generate consistent IDs (same as your extractHeadings)
+const generateId = (text: string) => {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+};
 
 interface MarkdownRendererProps {
     content: string;
@@ -14,6 +21,38 @@ interface MarkdownRendererProps {
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
     const components: Components = {
+        // ADD THESE HEADING COMPONENTS WITH IDs
+        h1: ({ children }) => {
+            if (!children) return <h1>{children}</h1>;
+            const id = generateId(String(children));
+            return <h1 id={id} className="scroll-mt-20">{children}</h1>;
+        },
+        h2: ({ children }) => {
+            if (!children) return <h2>{children}</h2>;
+            const id = generateId(String(children));
+            return <h2 id={id} className="scroll-mt-20">{children}</h2>;
+        },
+        h3: ({ children }) => {
+            if (!children) return <h3>{children}</h3>;
+            const id = generateId(String(children));
+            return <h3 id={id} className="scroll-mt-20">{children}</h3>;
+        },
+        h4: ({ children }) => {
+            if (!children) return <h4>{children}</h4>;
+            const id = generateId(String(children));
+            return <h4 id={id} className="scroll-mt-20">{children}</h4>;
+        },
+        h5: ({ children }) => {
+            if (!children) return <h5>{children}</h5>;
+            const id = generateId(String(children));
+            return <h5 id={id} className="scroll-mt-20">{children}</h5>;
+        },
+        h6: ({ children }) => {
+            if (!children) return <h6>{children}</h6>;
+            const id = generateId(String(children));
+            return <h6 id={id} className="scroll-mt-20">{children}</h6>;
+        },
+        // KEEP YOUR EXISTING COMPONENTS
         code: ({ node, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || '');
             const isInline = !className?.includes('language-');
