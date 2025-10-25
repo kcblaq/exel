@@ -21,8 +21,8 @@ interface ServicePageProps {
 
  
 export async function getServices(slug: string) {
-  // const url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const url = "https://tidy-fish-f8bacf1595.strapiapp.com";
+  const url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+  // const url = "https://tidy-fish-f8bacf1595.strapiapp.com";
 
   const res = await fetch(`${url}/api/services?slug=${slug}`, {
     next: { revalidate: 60}

@@ -13,6 +13,14 @@
   --font-sans: var(--font-family-sans);
   --font-display: var(--font-family-heading);    /* Used for headings */
  
+  /* ===== Font Sizes for Headings ===== */
+  /* Mobile-first approach with responsive scaling */
+  --font-size-h1: clamp(2rem, 5vw, 3.5rem);      /* 32px -> 56px */
+  --font-size-h2: clamp(1.75rem, 4vw, 3rem);     /* 28px -> 48px */
+  --font-size-h3: clamp(1.5rem, 3.5vw, 2.25rem); /* 24px -> 36px */
+  --font-size-h4: clamp(1.25rem, 3vw, 1.875rem); /* 20px -> 30px */
+  --font-size-h5: clamp(1.125rem, 2.5vw, 1.5rem);/* 18px -> 24px */
+  --font-size-h6: clamp(1rem, 2vw, 1.25rem);     /* 16px -> 20px */
 }
 
 
@@ -150,23 +158,60 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
-
   }
-   html {
+  
+  html {
     font-family: var(--font-sans); 
     scroll-behavior: smooth;
   }
-   h1, h2, h3, h4, h5, h6 {
+  
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
+  
+  h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: var(--font-size-h2);
+    margin-bottom: 1.25rem;
+  }
+  
+  h3 {
+    font-size: var(--font-size-h3);
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: var(--font-size-h4);
+    margin-bottom: 0.875rem;
+  }
+  
+  h5 {
+    font-size: var(--font-size-h5);
+    margin-bottom: 0.75rem;
+  }
+  
+  h6 {
+    font-size: var(--font-size-h6);
+    margin-bottom: 0.625rem;
+  }
+  
   ul, ol, li {
     font-family: var(--font-display);
   }
+  
   button {
-    font-family: var(--font-display)
+    font-family: var(--font-display);
   }
 
   body {
