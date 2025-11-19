@@ -73,7 +73,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             <a className="text-blue-600 hover:text-blue-800 underline" {...props} />
         ),
         img: ({ ...props }) => (
-            <img className="max-w-full h-auto rounded-lg" {...props} />
+            <img alt="A random image" className="max-w-full h-auto rounded-lg" {...props} />
         ),
     };
 
